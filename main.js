@@ -34,7 +34,10 @@ dom.convertButton.addEventListener("click", () => {
 });
 
 function displayResults(currency) {
-    
+    let fromRate = currency.rates.convertFrom;
+    let toRate = currency.rates.convertTo;
+
+    dom.finalValue.innerText = ((toRate / fromRate) * searchValue).toFixed(2);
 }
 
 dom.resetButton.addEventListener("click", () => {
