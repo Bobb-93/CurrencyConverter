@@ -15,17 +15,27 @@ let convertTo;
 let inputValue;
 
 // Event when currency is changed
-dom.selectFrom.addEventListener('change', (event) => {
-    convertFrom = `${event.target.value}`;
+dom.selectFrom.addEventListener("change", (event) => {
+    // convertFrom = `${event.target.value}`;
+    convertFrom = event.target.value;
+
+    console.log(convertFrom);
+
 });
 
 // Event when currency is changed
-dom.selectTo.addEventListener('change', (event) => {
-    convertTo = `${event.target.value}`;
+dom.selectTo.addEventListener("change", (event) => {
+    // convertTo = `${event.target.value}`;
+    convertTo = event.target.value;
+
+    console.log(convertTo);
+    
 });
 
 dom.currencyAmount.addEventListener("input", (event) => {
     inputValue = event.target.value;
+    console.log(inputValue);
+    
 });
 
 
@@ -37,6 +47,11 @@ function displayResults(currency) {
     let fromRate = currency.rates.convertFrom;
     let toRate = currency.rates.convertTo;
 
+    console.log(fromRate);
+    console.log(toRate);
+    console.log(currency);
+    
+    
     dom.finalValue.innerText = ((toRate / fromRate) * searchValue).toFixed(2);
 }
 
