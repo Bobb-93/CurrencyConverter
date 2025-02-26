@@ -10,18 +10,23 @@ const dom = {
 };
 
 let url = "https://v6.exchangerate-api.com/v6/6880e928c542f12ec6425196/latest/USD";
-
+let convertFrom;
+let convertTo;
+let inputValue;
 
 // Event when currency is changed
 dom.selectFrom.addEventListener('change', (event) => {
-    // resultFrom = `${event.target.value}`;
+    convertFrom = `${event.target.value}`;
 });
 
 // Event when currency is changed
 dom.selectTo.addEventListener('change', (event) => {
-    // resultTo = `${event.target.value}`;
+    convertTo = `${event.target.value}`;
 });
 
+dom.currencyAmount.addEventListener("input", (event) => {
+    inputValue = event.target.value;
+});
 
 dom.resetButton.addEventListener("click", () => {
     window.location.reload();
