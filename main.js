@@ -1,4 +1,4 @@
-const dom ={
+const dom = {
     enterAmount: document.getElementById("enter-amount"),
     currencyAmount: document.getElementById("currency-amount"),
     selectFrom: document.getElementById("select-from"),
@@ -11,8 +11,20 @@ const dom ={
 
 let url = "https://v6.exchangerate-api.com/v6/6880e928c542f12ec6425196/latest/USD";
 
-dom.resetButton.addEventListener("click", () =>{
+
+// Event when currency is changed
+dom.selectFrom.addEventListener('change', (event) => {
+    // resultFrom = `${event.target.value}`;
+});
+
+// Event when currency is changed
+dom.selectTo.addEventListener('change', (event) => {
+    // resultTo = `${event.target.value}`;
+});
+
+
+dom.resetButton.addEventListener("click", () => {
     window.location.reload();
     dom.finalValue.innerHTML = "";
-    
+
 });
