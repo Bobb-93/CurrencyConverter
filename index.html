@@ -12,12 +12,12 @@
         <h1>Currency Converter</h1>
 
         <div id="enter-amount">
-            <label for="currency-amount-label">Amount to convert:</label>
+            <label for="currency-amount">Amount to convert:</label>
             <input type="text" id="currency-amount" placeholder="0.00">
         </div>
 
         <div id="from-currency">
-            <label for="from-currency-label">From:</label>
+            <label for="select-from">From:</label>
             <select class="form-control from" id="select-from">
                 <option value="">Select One …</option>
                 <option value="USD">USD</option>
@@ -190,7 +190,7 @@
         </div>
 
         <div id="to-currency">
-            <label for="to-currency-label">To:</label>
+            <label for="select-to">To:</label>
             <select class="form-control from" id="select-to">
                 <option value="">Select One …</option>
                 <option value="USD">USD</option>
@@ -365,7 +365,7 @@
         <div class="text-center">
 
             <!-- convert button -->
-            <button class="btn btn-primary convert m-2" type="submit">
+            <button class="btn btn-primary convert m-2" id="convert-button" type="submit">
                 Convert
             </button>
             <!-- reset button -->
@@ -378,7 +378,7 @@
 
             <!-- Display the converted amount -->
             <h2>Converted Amount :
-                <span class="finalValue">0</span>
+                <span id="finalValue">0</span>
             </h2>
         </div>
     </main>
