@@ -28,6 +28,15 @@ dom.currencyAmount.addEventListener("input", (event) => {
     inputValue = event.target.value;
 });
 
+
+dom.convertButton.addEventListener("click", () => {
+    fetch(`${url}`).then(currency => currency.json()).then(displayResults);
+});
+
+function displayResults(currency) {
+    
+}
+
 dom.resetButton.addEventListener("click", () => {
     window.location.reload();
     dom.finalValue.innerHTML = "";
