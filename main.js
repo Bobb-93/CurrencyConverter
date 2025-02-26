@@ -44,15 +44,20 @@ dom.convertButton.addEventListener("click", () => {
 });
 
 function displayResults(currency) {
-    let fromRate = currency.rates.convertFrom;
-    let toRate = currency.rates.convertTo;
+    let fromRate = currency.rates[convertFrom];
+    let toRate = currency.rates[convertTo];
 
+    if (!fromRate || !toRate) {
+        console.error("Invalid currency selection.");
+        return;
+    }
+
+    console.log("Convert From:", convertFrom, "Convert To:", convertTo);
     console.log(fromRate);
     console.log(toRate);
     console.log(currency);
     
-    
-    dom.finalValue.innerText = ((toRate / fromRate) * searchValue).toFixed(2);
+    dom.finalValue.innerText = ((toRate / fromRate) * inputValue).toFixed(2);
 }
 
 dom.resetButton.addEventListener("click", () => {
