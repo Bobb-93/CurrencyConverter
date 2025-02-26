@@ -44,8 +44,8 @@ dom.convertButton.addEventListener("click", () => {
 });
 
 function displayResults(currency) {
-    let fromRate = currency.rates[convertFrom];
-    let toRate = currency.rates[convertTo];
+    let fromRate = currency.conversion_rates[convertFrom];
+    let toRate = currency.conversion_rates[convertTo];
 
     if (!fromRate || !toRate) {
         console.error("Invalid currency selection.");
