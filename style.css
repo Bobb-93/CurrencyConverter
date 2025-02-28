@@ -11,14 +11,23 @@
     margin-bottom: 10px;
 }
 
+#from-currency{
+    padding-left: 68px;
+}
+
 #to-currency{
     margin-top: 5px;
+    padding-left: 86px;
 }
 
 #select-to{
     margin-bottom: 10px;
 
 }
+
+/* .text-center{
+    text-align: center;
+} */
 
 #final-value{
     color: #0F0;
@@ -31,4 +40,6 @@ button{
 main{
     width: 500px;
     margin: 200px auto;
+    text-align: center;
+    border: 1px solid black;
 }
