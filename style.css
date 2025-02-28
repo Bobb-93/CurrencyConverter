@@ -3,7 +3,8 @@
 }
 
 #currency-amount{
-
+    width: 80px;
+    text-align: right;
 }
 
 #select-from{
@@ -11,7 +12,7 @@
 }
 
 #to-currency{
-
+    margin-top: 5px;
 }
 
 #select-to{
@@ -19,16 +20,8 @@
 
 }
 
-#convert-button{
-
-}
-
-#reset-button{
-
-}
-
 #final-value{
-    
+    color: #0F0;
 }
 
 button{
