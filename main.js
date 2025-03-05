@@ -34,12 +34,17 @@ dom.selectTo.addEventListener("change", (event) => {
 
 dom.currencyAmount.addEventListener("input", (event) => {
     inputValue = event.target.value;
+
     console.log(inputValue);
     
 });
 
 
 dom.convertButton.addEventListener("click", () => {
+    if(isNaN(inputValue)){
+        alert("You have NOT entered a valid number!");
+        return;
+    }
     fetch(`${url}`).then(currency => currency.json()).then(displayResults);
 });
 
