@@ -45,6 +45,17 @@ dom.convertButton.addEventListener("click", () => {
         alert("You have NOT entered a valid number!");
         return;
     }
+
+    if(typeof convertFrom === "undefined" ){
+        alert("You have NOT selected a currency to convert FROM!");
+        return;
+    }
+
+    if(typeof convertTo === "undefined"){
+        alert("You have NOT selected a currency to convert TO!");
+        return;
+    }
+    
     fetch(`${url}`).then(currency => currency.json()).then(displayResults);
 });
 
